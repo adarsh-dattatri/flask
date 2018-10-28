@@ -20,6 +20,11 @@ def hello_world():
     html = """
         <html>
             <h1>Welcome to {{library_name}} library!</h1>
+			<ul>
+				{% for author in authors %}
+					<li>{{author}}</li>
+				{% endfor %}
+			</ul>
         </html>
     """
     rendered_html = render_template_string(html, library_name=library_name)
