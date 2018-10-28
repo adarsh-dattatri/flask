@@ -27,7 +27,8 @@ def hello_world():
 			</ul>
         </html>
     """
-    rendered_html = render_template_string(html, library_name=library_name)
+    
     authors = ["Alan Poe", "Jorge L. Borges", "Mark Twain"]
+    rendered_html = render_template_string(html, library=library_name, authors = authors)
     # Using an <ul> tag add the authors using the template engine
     return rendered_html
